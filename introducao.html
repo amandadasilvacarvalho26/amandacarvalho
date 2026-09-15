@@ -1,0 +1,320 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Quem é Amanda?</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  background-color: #0d3b66;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.menu {
+  width: 100%;
+  background-color: #1e5f8a;
+  padding: 18px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.35);
+}
+
+/* ITENS PRINCIPAIS */
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item > a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.menu-item > a:hover {
+  background-color: white;
+  color: #1e5f8a;
+}
+
+/* SETINHA DO MENU */
+
+.menu-item > a::after {
+  content: " ▾";
+  font-size: 14px;
+}
+
+/* =========================
+   MENU SUSPENSO
+========================= */
+
+.painel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+
+  width: 210px;
+  background-color: #1e5f8a;
+
+  padding: 10px;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+/* FAZ O MENU APARECER */
+
+.menu-item:hover .painel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* CAIXINHAS DO MENU */
+
+.caixa {
+  background-color: #174b6d;
+  padding: 12px;
+  border-radius: 8px;
+
+  text-align: center;
+  margin: 6px 0;
+
+  transition: 0.3s ease;
+
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+
+  display: block;
+  font-size: 15px;
+}
+
+/* EFEITO DAS CAIXINHAS */
+
+.caixa:hover {
+  background-color: white;
+  color: #174b6d;
+  transform: scale(1.05);
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.conteudo {
+  display: flex;
+  gap: 20px;
+}
+
+.texto {
+  width: 55%;
+  border: 2px solid white;
+  padding: 15px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.imagens {
+  width: 45%;
+  position: relative;
+  height: 650px;
+}
+
+.imagens img {
+  width: 150px;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+/* POSIÇÕES */
+
+.img1 { top: 0; left: 10px; transform: rotate(-5deg); }
+.img2 { top: 20px; left: 150px; transform: rotate(6deg); }
+.img3 { top: 150px; left: 30px; transform: rotate(-8deg); }
+.img4 { top: 180px; left: 170px; transform: rotate(5deg); }
+.img5 { top: 320px; left: 60px; transform: rotate(-3deg); }
+.img6 { top: 80px; left: 300px; transform: rotate(-6deg); }
+.img7 { top: 260px; left: 320px; transform: rotate(7deg); }
+.img8 { top: 450px; left: 250px; transform: rotate(-5deg); }
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.extra {
+  margin-top: 50px;
+  padding: 20px;
+  border: 2px dashed white;
+  border-radius: 10px;
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+  .menu {
+    gap: 5px;
+    padding: 12px 5px;
+  }
+
+  .menu-item > a {
+    font-size: 14px;
+    padding: 10px 8px;
+  }
+
+  .painel {
+    width: 170px;
+  }
+
+  .conteudo {
+    flex-direction: column;
+  }
+
+  .texto,
+  .imagens {
+    width: 100%;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+
+<div class="menu">
+
+  <div class="menu-item">
+    <a href="#">1º trimestre</a>
+
+    <div class="painel">
+      <a href="impressora.html" class="caixa">Impressora 3D</a>
+      <a href="site.html" class="caixa">Site</a>
+      <a href="projeto.html" class="caixa">Projeto T-Rex</a>
+    </div>
+  </div>
+
+
+  <div class="menu-item">
+    <a href="#">2º trimestre</a>
+
+    <div class="painel">
+      <a href="jogo.html" class="caixa">Jogo no Scratch</a>
+      <a href="#espaco2" class="caixa">Espaço 2</a>
+      <a href="#espaco3" class="caixa">Espaço 3</a>
+    </div>
+  </div>
+
+
+  <div class="menu-item">
+    <a href="#">3º trimestre</a>
+
+    <div class="painel">
+      <a href="#espaco4" class="caixa">Espaço 1</a>
+      <a href="#espaco5" class="caixa">Espaço 2</a>
+      <a href="#espaco6" class="caixa">Espaço 3</a>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="container">
+
+  <h1>Quem é Amanda quando ninguém está olhando?</h1>
+
+  <div class="conteudo">
+
+    <div class="texto">
+
+      <p>
+        Bom, talvez o que eu vou falar não faça muito sentido com a proposta de um texto de apresentação… mas tudo bem, né?
+      </p>
+
+      <p>
+        Para começar, sou uma menina muito falante. Gosto tanto de ouvir quanto de ser ouvida, mas confesso que não sou a melhor pessoa para dar conselhos, alguém pode estar chorando horrores na minha frente e, no máximo, eu vou soltar um “é complicado mesmo”.
+      </p>
+
+      <p>
+        Sou completamente apaixonada por um carro específico: o Ford Fusion 2013/2014. Vi esse carro pela primeira vez em 2022 e, desde então, sou simplesmente obcecada por ele.
+      </p>
+
+      <p>
+        Tenho muita sorte com a minha família. Me dou super bem com a família do meu pai, e desde pequena a gente passa o Natal juntos, é praticamente uma tradição onde ninguém pode faltar. Tenho um carinho enorme por cada um deles.
+      </p>
+
+      <p>
+        Meu gosto musical é meio… questionável, talvez. Gosto muito de Leonardo, Leandro, Tina Turner, entre outros, tudo isso graças ao meu pai, que basicamente formou meu gosto musical KKKKK. Mas, como toda adolescente, também escuto outras coisas, como MPB, funk e alguns sertanejos.
+      </p>
+
+      <p>
+        Na escola, matemática e física definitivamente não são o meu forte. Por outro lado, melhorei bastante em inglês este ano, gosto até de química, mas acredito que minha maior facilidade mesmo seja na redação.
+      </p>
+
+      <p>
+        Acho que é isso… no fim, sou uma mistura de tudo isso aí.
+      </p>
+
+    </div>
+
+
+    <div class="imagens">
+
+      <img src="familia carvalho.jpeg" class="img1">
+      <img src="bem querer.jpeg" class="img2">
+      <img src="fusion.png.jpeg" class="img3">
+      <img src="eu te devoro.jpg" class="img4">
+      <img src="primos.png.jpeg" class="img5">
+      <img src="papai.png.jpeg" class="img6">
+      <img src="primaas.png.jpeg" class="img7">
+      <img src="lele.jpg" class="img8">
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

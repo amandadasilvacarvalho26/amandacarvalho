@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Jogo do Scratch</title>
+
+<!-- FONTES -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   FUNDO
+========================= */
+
+body {
+    margin: 0;
+    background-color: #69a84f;
+    color: #111;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* =========================
+   PÁGINA
+========================= */
+
+.pagina {
+    width: 97%;
+    min-height: 570px;
+    margin: 3px auto;
+    padding: 35px 40px;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   LAYOUT PRINCIPAL
+========================= */
+
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    gap: 45px;
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.texto {
+    width: 52%;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    letter-spacing: -1px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.65;
+    margin: 0 0 22px 0;
+}
+
+
+/* =========================
+   ÁREA DAS FOTOS
+========================= */
+
+.fotos {
+    width: 45%;
+    height: 520px;
+    position: relative;
+}
+
+
+/* =========================
+   FOTOS
+========================= */
+
+.foto {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+
+/* FOTO GRANDE - CIMA */
+
+.foto1 {
+    width: 70%;
+    height: 205px;
+    top: 0;
+    right: 0;
+}
+
+
+/* FOTO GRANDE - ESQUERDA */
+
+.foto2 {
+    width: 47%;
+    height: 215px;
+    top: 220px;
+    left: 0;
+}
+
+
+/* FOTO PEQUENA - DIREITA */
+
+.foto3 {
+    width: 47%;
+    height: 145px;
+    top: 220px;
+    right: 0;
+}
+
+
+/* FOTO PEQUENA - BAIXO */
+
+.foto4 {
+    width: 47%;
+    height: 145px;
+    top: 375px;
+    right: 0;
+}
+
+
+/* =========================
+   IMAGENS
+========================= */
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: 0.3s ease;
+}
+
+
+/* ZOOM AO PASSAR O MOUSE */
+
+.foto:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 800px) {
+
+    .pagina {
+        width: 94%;
+        padding: 25px 20px;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .texto {
+        width: 100%;
+    }
+
+    .fotos {
+        width: 100%;
+        height: 550px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="pagina">
+
+    <div class="conteudo">
+
+
+        <!-- =========================
+             TEXTO
+        ========================== -->
+
+        <div class="texto">
+
+            <h1>Jogo do Scratch</h1>
+
+            <p>
+                Agora, no segundo trimestre, fizemos um jogo
+                no site do Scratch.
+            </p>
+
+            <p>
+                No começo foi meio complicado, porque tivemos
+                que aprender a mexer em várias coisas e
+                programar o jogo, mas no final conseguimos
+                fazer dar certo.
+            </p>
+
+            <p>
+                Nosso jogo é parecido com o Flappy Bird. As
+                principais diferenças são o personagem, que no
+                nosso jogo não é um pássaro, e sim a professora
+                Carol, de Português. Além disso, em vez dos
+                famosos tubos verdes, eu fiz os tubos na cor azul,
+                para deixar o jogo com um visual diferente.
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             FOTOS
+        ========================== -->
+
+        <div class="fotos">
+
+
+            <!-- FOTO 1
+                 FOTO GRANDE DE CIMA
+            -->
+
+            <div class="foto foto1">
+                <img src="jogo.png">
+                -->
+
+            </div>
+
+
+
+            <!-- FOTO 2
+                 FOTO GRANDE DA ESQUERDA
+            -->
+
+            <div class="foto foto2">
+                <img src="carol.png">
+                -->
+
+            </div>
+
+
+
+            <!-- FOTO 3
+                 FOTO PEQUENA DA DIREITA
+            -->
+
+            <div class="foto foto3">
+                <img src="tubos.png">
+                -->
+
+            </div>
+
+
+
+            <!-- FOTO 4
+                 FOTO PEQUENA DE BAIXO
+            -->
+
+            <div class="foto foto4">
+                <img src="botao.png">
+                -->
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
